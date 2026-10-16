@@ -23,12 +23,7 @@
     <section class="hero">
       <p class="eyebrow">可下载的 API 2 模块</p>
       <h1>背屏的新玩法</h1>
-      <p class="lede">一份模块 ZIP 里有背屏卡片，也可以带上设置页。在这里按名称、作者、简介和标签找到它，下载后交给背屏卡片桥安装。这个网页只提供目录和下载，不会把模块装进 Android 应用。</p>
-      <ul class="facts">
-        <li>数据来自 modules.json</li>
-        <li>安装在应用内完成</li>
-        <li>需要在系统里重新应用</li>
-      </ul>
+      <p class="lede">发现喜欢的背屏卡片，下载后在背屏卡片桥中安装。</p>
     </section>
     <section class="browser" aria-labelledby="catalog-title">
       <div class="browser-head">
@@ -47,25 +42,22 @@
       </div>
       <div id="error" class="error" role="alert" hidden>
         <p class="error-title">目录没有加载成功</p>
-        <p data-error-detail>无法读取 modules.json。请检查网络或文件是否可访问后重试。本页不会改用示例数据。</p>
+        <p data-error-detail>加载失败，请稍后重试。</p>
         <button type="button" id="retry">重试</button>
       </div>
       <div id="catalog" class="catalog" aria-busy="true"></div>
     </section>
     <section class="install" aria-labelledby="install-title">
       <h2 id="install-title">安装说明</h2>
-      <p class="lede">下载只会保存 ZIP。接下来的步骤都在手机上完成。</p>
       <ol>
-        <li>在本页点「下载 ZIP」。浏览器保存文件，不会把模块安装到背屏卡片桥。</li>
-        <li>打开背屏卡片桥，在主页使用「安装 ZIP 模块」，选择刚刚下载的文件。</li>
-        <li>在应用扫描到的本地卡片里选择替换目标。扫描和写入使用已授权的 Shizuku；应用会先备份原资源，再写入模块载体。</li>
-        <li>到系统背屏设置移除旧卡，再从这张卡片原来的入口重新应用。写入完成不等于背屏已经换上新画面，需要你在系统里手动完成这一步。</li>
+        <li>点击「下载 ZIP」保存模块。</li>
+        <li>打开背屏卡片桥，使用「安装 ZIP 模块」导入文件。</li>
+        <li>选择本地卡片作为替换目标，按应用提示完成写入。</li>
+        <li>到系统背屏设置移除旧卡，再从原入口重新应用。</li>
       </ol>
-      <p class="note">应用不会注册新的系统卡片，也不会替你点击系统里的应用按钮。请只安装你信任的模块。本目录不检查脚本内容。</p>
     </section>
   </main>
-  <footer class="footer"><div class="wrap"><p>背屏卡片桥模块目录。模块列表只来自同目录的 modules.json。</p></div></footer>
-  <noscript><p class="noscript">需要启用 JavaScript 才能读取 modules.json。页面没有内置模块列表。</p></noscript>
+  <noscript><p class="noscript">请启用 JavaScript 浏览模块。</p></noscript>
   <script src="store.js" defer></script>
 </body>
 </html>

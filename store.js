@@ -319,8 +319,8 @@
     statusEl.textContent = "\u76ee\u5f55\u672a\u52a0\u8f7d";
     if (errorDetail) {
       errorDetail.textContent = kind === "format"
-        ? "modules.json \u7684\u683c\u5f0f\u65e0\u6cd5\u8bc6\u522b\u3002\u9700\u8981 schemaVersion \u4e3a 1\uff0c\u4e14 modules \u662f\u6570\u7ec4\u3002\u672c\u9875\u4e0d\u4f1a\u6539\u7528\u793a\u4f8b\u6570\u636e\u3002"
-        : "\u65e0\u6cd5\u8bfb\u53d6 modules.json\u3002\u8bf7\u68c0\u67e5\u7f51\u7edc\u6216\u6587\u4ef6\u662f\u5426\u53ef\u8bbf\u95ee\u540e\u91cd\u8bd5\u3002\u672c\u9875\u4e0d\u4f1a\u6539\u7528\u793a\u4f8b\u6570\u636e\u3002";
+        ? "模块目录格式有误，请稍后重试。"
+        : "加载失败，请检查网络后重试。";
     }
   }
 
