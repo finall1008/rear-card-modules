@@ -13,7 +13,10 @@
       "repository": "https://github.com/finall1008/xiaomi-backscreen-ai-token",
       "releaseUrl": "https://github.com/finall1008/xiaomi-backscreen-ai-token/releases/tag/v0.2.3",
       "downloadUrl": "https://github.com/finall1008/xiaomi-backscreen-ai-token/releases/download/v0.2.3/ai-usage-0.2.3.zip",
-      "tags": ["效率", "AI"]
+      "tags": ["效率", "AI"],
+      "previews": [
+        "https://raw.githubusercontent.com/finall1008/xiaomi-backscreen-ai-token/27feb81c0fdff4c896907c7a48c60272d919f8c4/previews/card.webp"
+      ]
     },
     {
       "id": "dev.finall.maiprofile",
