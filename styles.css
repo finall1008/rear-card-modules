@@ -85,17 +85,11 @@ button, input { font: inherit; color: inherit; }
 }
 
 .brand-mark {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   flex: 0 0 auto;
-  display: grid;
-  place-items: center;
+  display: block;
   border-radius: 8px;
-  background: var(--mint);
-  color: var(--mint-ink);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
 }
 
 .brand-text {
