@@ -26,6 +26,22 @@
 
 索引中的模块元数据应与对应 ZIP 根目录的 `module.json` 一致。下载地址应固定到明确的 Release 版本，不使用 main 分支归档或 latest 链接，避免展示版本与下载内容不一致。
 
+### 自有模块自动更新
+
+AI 用量背屏与舞萌背屏的 Release CI 会在 tag 发布、ZIP 上传成功后，运行本仓库的 `scripts/publish-module.py`，直接提交对应模块的目录更新并触发 Pages 部署。
+
+首次配置：
+
+1. 创建 fine-grained Personal Access Token，只选择 `finall1008/rear-card-modules`，授予 **Contents: Read and write**。
+2. 分别在 `xiaomi-backscreen-ai-token` 和 `xiaomi-backscreen-maimai-profile` 的 **Settings → Secrets and variables → Actions** 添加 repository secret：`MODULE_STORE_TOKEN`。
+3. 后续按原流程递增版本并推送 tag。包含同步步骤的新 tag 才会使用此流程；重新运行旧 tag 的旧 workflow 不会自动获得新增步骤。
+
+同步读取本次 Release ZIP 根目录的 `module.json`，更新同 ID 条目的版本、模块信息和固定版本下载地址；分类和预览图链接保持不变。相同内容重复发布不创建提交，旧版本重跑不覆盖较新版本。两个模块同时发布产生目录冲突时，重新读取最新目录后重试，保留另一模块的更新。新模块仍通过 PR 收录。
+
+默认 `GITHUB_TOKEN` 只属于发布模块自身的仓库，不能代替此跨仓库 Token。商店提交使用 PAT，以触发当前的 Pages 分支部署。
+
+同步脚本的本地检查：`python3 -B -m unittest discover -s scripts -p 'test_*.py'`。
+
 示例（请替换所有占位值）：
 
 ```json
