@@ -41,7 +41,11 @@
   "repository": "https://github.com/OWNER/REPO",
   "releaseUrl": "https://github.com/OWNER/REPO/releases/tag/v1.0.0",
   "downloadUrl": "https://github.com/OWNER/REPO/releases/download/v1.0.0/module.zip",
-  "tags": ["工具"]
+  "tags": ["工具"],
+  "previews": [
+    "https://raw.githubusercontent.com/OWNER/REPO/v1.0.0/previews/card.webp",
+    "https://raw.githubusercontent.com/OWNER/REPO/v1.0.0/previews/detail.webp"
+  ]
 }
 ```
 
@@ -60,6 +64,9 @@
 | `releaseUrl` | 当前版本发布页 HTTPS 地址 |
 | `downloadUrl` | 已构建模块 ZIP 的固定版本 HTTPS 地址 |
 | `tags` | 分类与搜索标签 |
+| `previews` | 有序的 HTTPS 图片直链数组，第一张为封面；可提供多张，省略或空数组表示暂无预览 |
+
+预览图保存在模块作者自己的公开仓库中，使用与发布版本对应的固定 tag 或 commit 下的图片直链（不是 GitHub 文件浏览页），无需复制到商店仓库或加入模块 ZIP。引用 tag 时应在发布 tag 前提交图片；界面更新时同步选择对应版本的预览图。建议使用示例数据，避免展示令牌或个人敏感信息。网页和 App 原生商店按数组顺序左右滑动预览，点击可全屏查看，完整等比显示图片。网页还支持前后按钮和键盘左右键切图，Esc 关闭大图。未提供图片时隐藏整个预览区域，不留占位；图片加载失败不影响下载或安装。
 
 商店仅列出当前收录版本，历史版本在各模块 Release 页查看。搜索与分类在浏览器本地完成，访问商店不调用 GitHub REST API、不需要 Token。
 
