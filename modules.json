@@ -2,6 +2,32 @@
   "schemaVersion": 1,
   "modules": [
     {
+      "id": "dev.finall.hoyolab",
+      "name": "米游社",
+      "version": "0.1.1",
+      "versionCode": 2,
+      "apiVersion": 2,
+      "description": "米游社每日委托与体力卡片：首页三游戏并列，详情页左右两栏，支持下拉刷新与后台定时更新。",
+      "author": "finall1008",
+      "capabilities": [
+        "network",
+        "storage"
+      ],
+      "repository": "https://github.com/finall1008/rear-card-hoyolab",
+      "releaseUrl": "https://github.com/finall1008/rear-card-hoyolab/releases/tag/v0.1.1",
+      "downloadUrl": "https://github.com/finall1008/rear-card-hoyolab/releases/download/v0.1.1/hoyolab-module.zip",
+      "tags": [
+        "游戏",
+        "米游社"
+      ],
+      "previews": [
+        "https://raw.githubusercontent.com/finall1008/rear-card-hoyolab/v0.1.1/previews/home.png",
+        "https://raw.githubusercontent.com/finall1008/rear-card-hoyolab/v0.1.1/previews/genshin.png",
+        "https://raw.githubusercontent.com/finall1008/rear-card-hoyolab/v0.1.1/previews/hsr.png",
+        "https://raw.githubusercontent.com/finall1008/rear-card-hoyolab/v0.1.1/previews/zzz.png"
+      ]
+    },
+    {
       "id": "dev.finall.aitoken",
       "name": "AI 用量背屏",
       "version": "0.3.0",
