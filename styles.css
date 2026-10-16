@@ -267,6 +267,82 @@ button, input { font: inherit; color: inherit; }
   box-shadow: var(--shadow);
 }
 
+.preview {
+  grid-column: 1 / -1;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #eeeae3;
+}
+.preview-track {
+  position: relative;
+  display: flex;
+  width: 100%;
+  aspect-ratio: 912 / 596;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.preview-track::-webkit-scrollbar { display: none; }
+.preview-slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+button.preview-slide { cursor: zoom-in; }
+.preview-slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; }
+.preview-message {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+.preview-controls { display: flex; justify-content: center; align-items: center; gap: 16px; padding: 6px; }
+.preview-control {
+  min-width: 40px;
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--elev);
+  cursor: pointer;
+  padding: 4px 12px;
+}
+.preview-count { min-width: 4em; text-align: center; font-size: 0.86rem; }
+.preview-open { overflow: hidden; }
+.preview-dialog {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  background: #101114;
+  color: #fff;
+}
+.preview-dialog[open] { display: flex; flex-direction: column; }
+.preview-dialog::backdrop { background: #101114; }
+.preview-dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.preview-dialog-head h2 { margin: 0; font-size: 1rem; }
+.preview-dialog .preview-control { background: #25262b; color: #fff; border-color: #43444a; }
+#preview-content { flex: 1; min-height: 0; margin-top: 12px; }
+#preview-content .preview { height: 100%; display: flex; flex-direction: column; background: transparent; }
+#preview-content .preview-track { flex: 1; min-height: 0; aspect-ratio: auto; }
+#preview-content .preview-message { color: #c8c9cd; }
+
 .mark {
   width: 48px;
   height: 48px;

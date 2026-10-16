@@ -7,7 +7,7 @@
   <meta name="description" content="背屏卡片桥的可下载 API 2 模块目录。下载 ZIP 后，在应用里安装并选择本地目标，再到系统背屏设置中重新应用。">
   <meta name="theme-color" content="#f3efe6">
   <link rel="icon" type="image/png" href="app-icon.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <header class="topbar">
@@ -57,7 +57,14 @@
       </ol>
     </section>
   </main>
+  <dialog id="preview-viewer" class="preview-dialog" aria-labelledby="preview-title">
+    <header class="preview-dialog-head">
+      <h2 id="preview-title">卡片预览</h2>
+      <button type="button" id="preview-close" class="preview-control" autofocus aria-label="关闭预览">关闭</button>
+    </header>
+    <div id="preview-content"></div>
+  </dialog>
   <noscript><p class="noscript">请启用 JavaScript 浏览模块。</p></noscript>
-  <script src="store.js" defer></script>
+  <script src="store.js?v=2" defer></script>
 </body>
 </html>

@@ -71,7 +71,8 @@
       repository: asString(raw.repository),
       releaseUrl: asString(raw.releaseUrl),
       downloadUrl: asString(raw.downloadUrl),
-      tags: cleanTags(raw.tags)
+      tags: cleanTags(raw.tags),
+      previews: Array.isArray(raw.previews) ? raw.previews.map(httpsUrl).filter(Boolean) : []
     };
   }
 
@@ -214,6 +215,119 @@
     return anchor;
   }
 
+  var previewDialog = document.getElementById("preview-viewer");
+  var previewContent = document.getElementById("preview-content");
+  var previewTitle = document.getElementById("preview-title");
+  var viewerGallery = null;
+
+  document.getElementById("preview-close").addEventListener("click", function () {
+    previewDialog.close();
+  });
+  previewDialog.addEventListener("close", function () {
+    document.body.classList.remove("preview-open");
+    clear(previewContent);
+    viewerGallery = null;
+  });
+  previewDialog.addEventListener("keydown", function (event) {
+    if (viewerGallery) viewerGallery.handleKey(event);
+  });
+
+  function openPreview(mod, page) {
+    clear(previewContent);
+    previewTitle.textContent = mod.name + " · 预览";
+    viewerGallery = createPreview(mod, true);
+    previewContent.appendChild(viewerGallery.element);
+    document.body.classList.add("preview-open");
+    previewDialog.showModal();
+    viewerGallery.goTo(page);
+  }
+
+  function createPreview(mod, expanded) {
+    var frame = document.createElement("section");
+    frame.className = "preview";
+    frame.setAttribute("aria-label", mod.name + "预览图");
+    var track = document.createElement("div");
+    track.className = "preview-track";
+    frame.appendChild(track);
+    var page = 0;
+
+    mod.previews.forEach(function (url, index) {
+      var slide = document.createElement(expanded ? "div" : "button");
+      slide.className = "preview-slide";
+      if (!expanded) {
+        slide.type = "button";
+        slide.setAttribute("aria-label", "放大查看" + mod.name + "第 " + (index + 1) + " 张预览图");
+        slide.addEventListener("click", function () { openPreview(mod, index); });
+      }
+      var message = document.createElement("span");
+      message.className = "preview-message";
+      message.textContent = "正在加载…";
+      var image = document.createElement("img");
+      image.alt = mod.name + "预览，第 " + (index + 1) + " 张，共 " + mod.previews.length + " 张";
+      image.loading = "lazy";
+      image.decoding = "async";
+      image.referrerPolicy = "no-referrer";
+      image.addEventListener("load", function () { message.hidden = true; });
+      image.addEventListener("error", function () {
+        image.hidden = true;
+        message.hidden = false;
+        message.textContent = "图片加载失败";
+      });
+      image.src = url;
+      slide.appendChild(message);
+      slide.appendChild(image);
+      track.appendChild(slide);
+    });
+
+    var controls = document.createElement("div");
+    controls.className = "preview-controls";
+    var previous = document.createElement("button");
+    previous.type = "button";
+    previous.className = "preview-control";
+    previous.textContent = "←";
+    previous.setAttribute("aria-label", "上一张预览图");
+    var count = document.createElement("span");
+    count.className = "preview-count";
+    count.setAttribute("aria-live", "polite");
+    count.setAttribute("aria-atomic", "true");
+    var next = document.createElement("button");
+    next.type = "button";
+    next.className = "preview-control";
+    next.textContent = "→";
+    next.setAttribute("aria-label", "下一张预览图");
+    controls.appendChild(previous);
+    controls.appendChild(count);
+    controls.appendChild(next);
+    previous.hidden = next.hidden = mod.previews.length < 2;
+    frame.appendChild(controls);
+
+    function update() {
+      count.textContent = (page + 1) + " / " + mod.previews.length;
+      previous.disabled = page === 0;
+      next.disabled = page === mod.previews.length - 1;
+    }
+    function goTo(target) {
+      page = Math.max(0, Math.min(target, mod.previews.length - 1));
+      track.scrollTo({ left: page * track.clientWidth, behavior: "instant" });
+      update();
+    }
+    function handleKey(event) {
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      event.preventDefault();
+      goTo(page + (event.key === "ArrowLeft" ? -1 : 1));
+    }
+    previous.addEventListener("click", function () { goTo(page - 1); });
+    next.addEventListener("click", function () { goTo(page + 1); });
+    if (!expanded) frame.addEventListener("keydown", handleKey);
+    track.addEventListener("scroll", function () {
+      if (!track.clientWidth) return;
+      page = Math.max(0, Math.min(Math.round(track.scrollLeft / track.clientWidth), mod.previews.length - 1));
+      update();
+    }, { passive: true });
+    update();
+    return { element: frame, goTo: goTo, handleKey: handleKey };
+  }
+
   function renderCard(mod) {
     var article = document.createElement("article");
     article.className = "card";
@@ -275,6 +389,7 @@
       actions.insertBefore(missing, actions.firstChild);
     }
     body.appendChild(actions);
+    if (mod.previews.length) article.appendChild(createPreview(mod, false).element);
     article.appendChild(mark);
     article.appendChild(body);
     return article;
