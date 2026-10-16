@@ -27,7 +27,10 @@
       "repository": "https://github.com/finall1008/xiaomi-backscreen-maimai-profile",
       "releaseUrl": "https://github.com/finall1008/xiaomi-backscreen-maimai-profile/releases/tag/v1.0.3",
       "downloadUrl": "https://github.com/finall1008/xiaomi-backscreen-maimai-profile/releases/download/v1.0.3/MaimaiRearProfile-v1.0.3.zip",
-      "tags": ["游戏", "舞萌"]
+      "tags": ["游戏", "舞萌"],
+      "previews": [
+        "https://raw.githubusercontent.com/finall1008/xiaomi-backscreen-maimai-profile/0bcbb7af1760eb50eef82c6caa9c012913a4b282/previews/maimai-settings-preview.png"
+      ]
     }
   ]
 }
