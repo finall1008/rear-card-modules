@@ -4,16 +4,22 @@
     {
       "id": "dev.finall.aitoken",
       "name": "AI 用量背屏",
-      "version": "0.2.3",
-      "versionCode": 5,
+      "version": "0.3.0",
+      "versionCode": 6,
       "apiVersion": 2,
-      "description": "查看 Codex、Kimi Code、DeepSeek 与小米 MiMo 用量",
+      "description": "查看 Codex、Kimi Code、DeepSeek、小米 MiMo 与 Cursor 用量，背屏最多展示四个来源",
       "author": "finall1008",
-      "capabilities": ["network", "storage"],
+      "capabilities": [
+        "network",
+        "storage"
+      ],
       "repository": "https://github.com/finall1008/xiaomi-backscreen-ai-token",
-      "releaseUrl": "https://github.com/finall1008/xiaomi-backscreen-ai-token/releases/tag/v0.2.3",
-      "downloadUrl": "https://github.com/finall1008/xiaomi-backscreen-ai-token/releases/download/v0.2.3/ai-usage-0.2.3.zip",
-      "tags": ["效率", "AI"],
+      "releaseUrl": "https://github.com/finall1008/xiaomi-backscreen-ai-token/releases/tag/v0.3.0",
+      "downloadUrl": "https://github.com/finall1008/xiaomi-backscreen-ai-token/releases/download/v0.3.0/ai-usage-0.3.0.zip",
+      "tags": [
+        "效率",
+        "AI"
+      ],
       "previews": [
         "https://raw.githubusercontent.com/finall1008/xiaomi-backscreen-ai-token/27feb81c0fdff4c896907c7a48c60272d919f8c4/previews/card.webp"
       ]
@@ -26,11 +32,18 @@
       "apiVersion": 2,
       "description": "舞萌玩家资料卡，支持下拉免费刷新和主屏资料设置。",
       "author": "finall1008",
-      "capabilities": ["network", "storage", "files"],
+      "capabilities": [
+        "network",
+        "storage",
+        "files"
+      ],
       "repository": "https://github.com/finall1008/xiaomi-backscreen-maimai-profile",
       "releaseUrl": "https://github.com/finall1008/xiaomi-backscreen-maimai-profile/releases/tag/v1.0.4",
       "downloadUrl": "https://github.com/finall1008/xiaomi-backscreen-maimai-profile/releases/download/v1.0.4/MaimaiRearProfile-v1.0.4.zip",
-      "tags": ["游戏", "舞萌"],
+      "tags": [
+        "游戏",
+        "舞萌"
+      ],
       "previews": [
         "https://raw.githubusercontent.com/finall1008/xiaomi-backscreen-maimai-profile/0bcbb7af1760eb50eef82c6caa9c012913a4b282/previews/maimai-settings-preview.png"
       ]
