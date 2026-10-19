@@ -53,8 +53,8 @@
     {
       "id": "dev.finall.maiprofile",
       "name": "舞萌背屏",
-      "version": "1.1.0",
-      "versionCode": 8,
+      "version": "1.1.3",
+      "versionCode": 11,
       "apiVersion": 2,
       "description": "舞萌三页背屏卡：壁纸、资料与开屏随机 B35/B15 成绩，记忆页码，支持下拉免费刷新。",
       "author": "finall1008",
@@ -64,8 +64,8 @@
         "files"
       ],
       "repository": "https://github.com/finall1008/xiaomi-backscreen-maimai-profile",
-      "releaseUrl": "https://github.com/finall1008/xiaomi-backscreen-maimai-profile/releases/tag/v1.1.0",
-      "downloadUrl": "https://github.com/finall1008/xiaomi-backscreen-maimai-profile/releases/download/v1.1.0/MaimaiRearProfile-v1.1.0.zip",
+      "releaseUrl": "https://github.com/finall1008/xiaomi-backscreen-maimai-profile/releases/tag/v1.1.3",
+      "downloadUrl": "https://github.com/finall1008/xiaomi-backscreen-maimai-profile/releases/download/v1.1.3/MaimaiRearProfile-v1.1.3.zip",
       "tags": [
         "游戏",
         "舞萌"
