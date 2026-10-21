@@ -77,27 +77,27 @@
     {
       "id": "dev.endfield.rearcard",
       "name": "终末地 · 体力与立绘",
-      "version": "1.1.1",
-      "versionCode": 4,
+      "version": "1.1.6",
+      "versionCode": 9,
       "apiVersion": 2,
       "description": "左右滑动查看森空岛国服体力、展示蚀刻章与干员养成，支持高清自定义立绘、后台刷新和息屏快照。",
-      "author": "Endfield Rear Card",
+      "author": "misakayuuki",
       "capabilities": [
         "network",
         "storage"
       ],
       "repository": "https://github.com/misakayuuki/rear-card-endfield",
-      "releaseUrl": "https://github.com/misakayuuki/rear-card-endfield/releases/tag/v1.1.1",
-      "downloadUrl": "https://github.com/misakayuuki/rear-card-endfield/releases/download/v1.1.1/endfield-rear-card-1.1.1.zip",
+      "releaseUrl": "https://github.com/misakayuuki/rear-card-endfield/releases/tag/v1.1.6",
+      "downloadUrl": "https://github.com/misakayuuki/rear-card-endfield/releases/download/v1.1.6/endfield-rear-card-1.1.6.zip",
       "tags": [
         "游戏",
         "终末地",
         "森空岛"
       ],
       "previews": [
-        "https://raw.githubusercontent.com/misakayuuki/rear-card-endfield/v1.1.1/previews/card.png",
-        "https://raw.githubusercontent.com/misakayuuki/rear-card-endfield/v1.1.1/previews/glory.png",
-        "https://raw.githubusercontent.com/misakayuuki/rear-card-endfield/v1.1.1/previews/operators.png"
+        "https://raw.githubusercontent.com/misakayuuki/rear-card-endfield/v1.1.6/previews/card.png",
+        "https://raw.githubusercontent.com/misakayuuki/rear-card-endfield/v1.1.6/previews/current-glory.png",
+        "https://raw.githubusercontent.com/misakayuuki/rear-card-endfield/v1.1.6/previews/current-operators.png"
       ]
     }
   ]
