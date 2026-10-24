@@ -4,18 +4,18 @@
     {
       "id": "dev.finall.hoyolab",
       "name": "米游社",
-      "version": "0.1.7",
-      "versionCode": 8,
+      "version": "0.1.8",
+      "versionCode": 9,
       "apiVersion": 2,
-      "description": "米游社每日委托与体力卡片：首页三游戏并列，详情页左右两栏，支持下拉刷新与后台定时更新。",
+      "description": "米游社五页背屏卡片：简洁体力、三游戏总览与详情，支持平滑翻页、页码记忆、下拉刷新与后台定时更新。",
       "author": "finall1008",
       "capabilities": [
         "network",
         "storage"
       ],
       "repository": "https://github.com/finall1008/rear-card-hoyolab",
-      "releaseUrl": "https://github.com/finall1008/rear-card-hoyolab/releases/tag/v0.1.7",
-      "downloadUrl": "https://github.com/finall1008/rear-card-hoyolab/releases/download/v0.1.7/rear-card-hoyolab-0.1.7.zip",
+      "releaseUrl": "https://github.com/finall1008/rear-card-hoyolab/releases/tag/v0.1.8",
+      "downloadUrl": "https://github.com/finall1008/rear-card-hoyolab/releases/download/v0.1.8/rear-card-hoyolab-0.1.8.zip",
       "tags": [
         "游戏",
         "米游社"
