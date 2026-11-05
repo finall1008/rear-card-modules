@@ -99,6 +99,32 @@
         "https://raw.githubusercontent.com/misakayuuki/rear-card-endfield/v1.1.6/previews/current-glory.png",
         "https://raw.githubusercontent.com/misakayuuki/rear-card-endfield/v1.1.6/previews/current-operators.png"
       ]
+    },
+    {
+      "id": "dev.saltmai.random",
+      "name": "舞萌随机歌曲",
+      "version": "1.0.0",
+      "versionCode": 22,
+      "apiVersion": 2,
+      "description": "长按曲绘随机歌曲，左滑进行等级、版本、难度筛选，支持记忆随机历史、清除曲绘缓存。",
+      "author": "Lahantzi",
+      "capabilities": [
+        "network",
+        "files"
+      ],
+      "repository": "https://github.com/LahantziBade/saltmai-random",
+      "releaseUrl": "https://github.com/LahantziBade/saltmai-random/releases/tag/v1.0.0",
+      "downloadUrl": "https://github.com/LahantziBade/saltmai-random/releases/download/v1.0.0/saltmai-random-v1.0.0.zip",
+      "tags": [
+        "游戏",
+        "舞萌"
+      ],
+      "previews": [
+        "https://raw.githubusercontent.com/LahantziBade/saltmai-random/7ed7598ffe330d47b482ea0c072b8a9afc19b23e/previews/preview.png",
+        "https://raw.githubusercontent.com/LahantziBade/saltmai-random/7ed7598ffe330d47b482ea0c072b8a9afc19b23e/previews/filter.png",
+        "https://raw.githubusercontent.com/LahantziBade/saltmai-random/7ed7598ffe330d47b482ea0c072b8a9afc19b23e/previews/version.png",
+        "https://raw.githubusercontent.com/LahantziBade/saltmai-random/7ed7598ffe330d47b482ea0c072b8a9afc19b23e/previews/settings.jpg"
+      ]
     }
   ]
 }
