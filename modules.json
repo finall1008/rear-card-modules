@@ -30,8 +30,8 @@
     {
       "id": "dev.finall.aitoken",
       "name": "AI 用量背屏",
-      "version": "0.6.1",
-      "versionCode": 15,
+      "version": "0.6.2",
+      "versionCode": 16,
       "apiVersion": 2,
       "description": "查看 Codex、Kimi Code、DeepSeek、小米 MiMo、Cursor、Antigravity 与 OpenCode Go 用量，背屏最多展示四个来源",
       "author": "finall1008",
@@ -40,8 +40,8 @@
         "storage"
       ],
       "repository": "https://github.com/finall1008/xiaomi-backscreen-ai-token",
-      "releaseUrl": "https://github.com/finall1008/xiaomi-backscreen-ai-token/releases/tag/v0.6.1",
-      "downloadUrl": "https://github.com/finall1008/xiaomi-backscreen-ai-token/releases/download/v0.6.1/ai-usage-0.6.1.zip",
+      "releaseUrl": "https://github.com/finall1008/xiaomi-backscreen-ai-token/releases/tag/v0.6.2",
+      "downloadUrl": "https://github.com/finall1008/xiaomi-backscreen-ai-token/releases/download/v0.6.2/ai-usage-0.6.2.zip",
       "tags": [
         "效率",
         "AI"
